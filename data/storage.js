@@ -14,7 +14,7 @@ function setLastBugIdInStorage(id) {
         if (err) {
             console.log(err);
         } else {
-            console.log('ok.');
+            console.log(`最后一个BUG的id已缓存：${id}`);
         }
     });
 }

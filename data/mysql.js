@@ -1,11 +1,7 @@
-var mysql = require('mysql');
+const mysql = require('mysql');
+const {mysqlConfig} = require('../notifier.config.js');
 
-var connection = mysql.createConnection({
-    host     : '192.168.1.220',
-    user     : 'root',
-    password : 'root',
-    database : 'zentao'
-});
+const connection = mysql.createConnection(mysqlConfig);
 
 connection.connect(function(err) {
     if (err) {
@@ -13,7 +9,7 @@ connection.connect(function(err) {
         return;
     }
 
-    console.log('connected as id ' + connection.threadId);
+    console.log('数据库连接成功');
 });
 
 module.exports = {connection};
