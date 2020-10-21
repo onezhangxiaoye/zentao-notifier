@@ -25,8 +25,18 @@ function getLastBugId() {
     return getMyBugs('SELECT id FROM zt_bug ORDER BY id DESC limit 1;');
 }
 
+function searchAllUser() {
+    return getMyBugs('SELECT account,realname FROM zt_user;');
+}
+
+function searchAllProject() {
+    return getMyBugs('SELECT id,name FROM zt_project;');
+}
+
 module.exports = {
     getLastBugId,
     getAllActiveBugs,
     getNewBugs,
+    searchAllUser,
+    searchAllProject,
 }

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "user": "node utils/searchAllUser.js",
+    "project": "node utils/searchAllProject.js"
   },
   "keywords": [],
   "author": "",
